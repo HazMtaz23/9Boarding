@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Deals Workflow • 9Boarding</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#e9eef9', 100: '#cdd8f0', 200: '#a9b9e2', 300: '#7e95cf', 400: '#566fb7',
+                500: '#3a5498', 600: '#2b417a', 700: '#223665', 800: '#1a2a4f', 900: '#121d38'
+              },
+              surface: { 100:'#f8fafc',200:'#eef2f7',300:'#e2e8f0' }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+    </style>
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="sticky top-0 z-40 bg-brand-800 shadow-sm">
+      <div class="mx-auto max-w-7xl px-6 py-4 flex items-center gap-4 text-white">
+        <a href="/" class="flex items-center gap-3">
+          <img src="./Images/9fin.jpg" alt="9fin logo" class="h-8 w-auto rounded object-contain" />
+          <span class="text-lg font-semibold">9Boarding</span>
+        </a>
+        <nav class="ml-auto hidden sm:flex items-center gap-6 text-sm">
+          <a href="/index.html#workflows" class="text-white/90 hover:text-white">Workflows</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 py-10">
+      <a href="/index.html#workflows" class="text-sm text-brand-700 hover:underline">← Back to workflows</a>
+      <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-2">Deals Workflow</h1>
+      <p class="mt-2 text-gray-600">Start by reading the core docs; then test your understanding with a quick quiz.</p>
+
+      <section class="mt-8 grid gap-8 lg:grid-cols-3">
+        <div class="lg:col-span-2 space-y-6">
+          <div class="rounded-xl border border-surface-200 bg-white/80 shadow-sm p-5">
+            <h2 class="font-semibold">Reading list</h2>
+            <p class="mt-2 text-sm text-gray-700">Review these Notion docs to understand our end-to-end flow for debt deal syndications from bank blasts.</p>
+            <ul id="reading-list" class="mt-4 space-y-3 text-sm text-gray-700">
+              <li class="flex items-start gap-3">
+                <input type="checkbox" data-key="notion:intro" class="mt-1 h-4 w-4 rounded border-surface-300 text-brand-600 focus:ring-brand-600" />
+                <div>
+                  <a href="#" target="_blank" class="font-medium text-brand-700 hover:underline">Intro: What is a bank blast?</a>
+                  <p class="text-gray-600">Structure, typical senders, and cadence.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <input type="checkbox" data-key="notion:intake" class="mt-1 h-4 w-4 rounded border-surface-300 text-brand-600 focus:ring-brand-600" />
+                <div>
+                  <a href="#" target="_blank" class="font-medium text-brand-700 hover:underline">Intake: Parsing and capturing key terms</a>
+                  <p class="text-gray-600">Issuer, tranches, size, pricing talk, timing, bookrunners.</p>
+                </div>
+              </li>
+              <li class="flex items-start gap-3">
+                <input type="checkbox" data-key="notion:handoff" class="mt-1 h-4 w-4 rounded border-surface-300 text-brand-600 focus:ring-brand-600" />
+                <div>
+                  <a href="#" target="_blank" class="font-medium text-brand-700 hover:underline">Handoff: Creating the deal entry</a>
+                  <p class="text-gray-600">Initial record creation and team notifications.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-surface-200 bg-white/80 shadow-sm p-5">
+            <h2 class="font-semibold">Quick quiz</h2>
+            <p class="mt-2 text-sm text-gray-700">Answer the questions below. You’ll get instant feedback.</p>
+            <form id="quiz" class="mt-4 space-y-5 text-sm text-gray-800">
+              <div>
+                <label class="font-medium">1) Which of these is NOT typically included in a bank blast?</label>
+                <div class="mt-2 space-y-2">
+                  <label class="flex items-center gap-2"><input type="radio" name="q1" value="issuer" class="h-4 w-4"/> Issuer</label>
+                  <label class="flex items-center gap-2"><input type="radio" name="q1" value="bookrunners" class="h-4 w-4"/> Bookrunners</label>
+                  <label class="flex items-center gap-2"><input type="radio" name="q1" value="weather" class="h-4 w-4"/> Weather forecast</label>
+                </div>
+              </div>
+              <div>
+                <label class="font-medium">2) What is “pricing talk” commonly referring to?</label>
+                <input type="text" name="q2" class="mt-2 w-full rounded-md border border-surface-300 p-2 focus:outline-none focus:ring-2 focus:ring-brand-600" placeholder="Your answer..." />
+              </div>
+              <button type="submit" class="inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700">Check answers</button>
+              <p id="quiz-result" class="mt-2 text-sm"></p>
+            </form>
+          </div>
+        </div>
+
+        <aside class="space-y-4">
+          <div class="rounded-xl border border-surface-200 bg-white/80 shadow-sm p-5">
+            <h3 class="font-semibold">Tips</h3>
+            <ul class="mt-2 text-sm text-gray-700 list-disc ml-5 space-y-1">
+              <li>Skim for the key nouns: issuer, tranches, size, price, timing.</li>
+              <li>Keep an eye on any updates or revised terms.</li>
+              <li>Use consistent formatting when capturing data.</li>
+            </ul>
+          </div>
+          <div class="rounded-xl border border-surface-200 bg-white/80 shadow-sm p-5">
+            <h3 class="font-semibold">Progress</h3>
+            <p class="mt-1 text-sm text-gray-700">Reading completed: <span id="reading-progress">0/3</span></p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="mt-16 border-t border-surface-200">
+      <div class="mx-auto max-w-7xl px-6 py-8 text-sm text-gray-500 flex items-center justify-between">
+        <p>© <span id="year"></span> 9Boarding</p>
+        <a class="hover:text-brand-700" href="mailto:people@9fin.com">Contact People Ops</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear()
+      // Persist reading list via localStorage
+      const boxes = document.querySelectorAll('#reading-list input[type="checkbox"]')
+      const KEY = '9boarding:deals:reading'
+      const saved = JSON.parse(localStorage.getItem(KEY) || '{}')
+      boxes.forEach(b => { b.checked = !!saved[b.dataset.key] })
+      const progressEl = document.getElementById('reading-progress')
+      const updateProgress = () => {
+        const total = boxes.length
+        const done = Array.from(boxes).filter(b => b.checked).length
+        progressEl.textContent = `${done}/${total}`
+      }
+      updateProgress()
+      boxes.forEach(b => b.addEventListener('change', () => {
+        const next = { ...saved, [b.dataset.key]: b.checked }
+        localStorage.setItem(KEY, JSON.stringify(next))
+        saved[b.dataset.key] = b.checked
+        updateProgress()
+      }))
+
+      // Quiz logic
+      const quiz = document.getElementById('quiz')
+      const result = document.getElementById('quiz-result')
+      quiz.addEventListener('submit', (e) => {
+        e.preventDefault()
+        const data = new FormData(quiz)
+        const q1 = data.get('q1')
+        const q2 = (data.get('q2') || '').toString().trim().toLowerCase()
+        let score = 0
+        if (q1 === 'weather') score += 1
+        if (q2.includes('yield') || q2.includes('spread') || q2.includes('coupon') || q2.includes('price guidance')) score += 1
+        if (score === 2) {
+          result.textContent = 'Great job! ✅ You nailed it.'
+          result.className = 'mt-2 text-sm text-green-700'
+        } else {
+          result.textContent = 'Not quite yet. Review the reading list and try again.'
+          result.className = 'mt-2 text-sm text-red-700'
+        }
+      })
+    </script>
+  </body>
+</html>
