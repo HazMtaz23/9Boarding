@@ -81,7 +81,7 @@
                   </div>
                   <div>
                     <div class="text-gray-500">Date</div>
-                    <div class="font-medium">Tue, 04 Nov 25 (UTC 07:06)</div>
+                    <div class="font-medium">Fri, 31 Oct 25 (UTC 07:51)</div>
                   </div>
                   <div>
                     <div class="text-gray-500">Region</div>
@@ -143,8 +143,8 @@
                     <label class="text-sm text-gray-700">Company</label>
                     <select id="companySelect" class="mt-1 w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm">
                       <option value="">Select company...</option>
-                      <option>Telefonica</option>
                       <option>Telefónica Brasil</option>
+                      <option>Telefonica</option>
                       <option>Telefónica Deutschland Holding</option>
                       <option>Other / None</option>
                     </select>
@@ -154,16 +154,16 @@
                     <label class="text-sm text-gray-700">Decision</label>
                     <div class="mt-2 grid grid-cols-2 gap-2">
                       <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
-                        <input type="radio" name="decision" value="publish" class="h-4 w-4 text-brand-600" />
-                        <span>Publish</span>
-                      </label>
-                      <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
                         <input type="radio" name="decision" value="irrelevant" class="h-4 w-4 text-brand-600" />
                         <span>Irrelevant</span>
                       </label>
                       <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
                         <input type="radio" name="decision" value="duplicate" class="h-4 w-4 text-brand-600" />
                         <span>Duplicate</span>
+                      </label>
+                      <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                        <input type="radio" name="decision" value="publish" class="h-4 w-4 text-brand-600" />
+                        <span>Publish</span>
                       </label>
                       <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
                         <input type="radio" name="decision" value="suppress" class="h-4 w-4 text-brand-600" />
@@ -174,7 +174,7 @@
 
                   <div>
                     <label for="notes" class="text-sm text-gray-700">Notes (optional)</label>
-                    <textarea id="notes" rows="3" class="mt-1 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Why publish / not publish? Any tagging notes?"></textarea>
+                    <textarea id="notes" rows="3" class="mt-1 w-full rounded-md border border-surface-300 px-3 py-2 text-sm"></textarea>
                   </div>
 
                   <div class="flex gap-3">
@@ -224,7 +224,7 @@
                       </div>
                       <div>
                         <div class="text-gray-500">Date</div>
-                        <div class="font-medium">Tue, 04 Nov 25 (UTC 07:06)</div>
+                        <div class="font-medium">Mon, 03 Nov 25 (UTC 19:00)</div>
                       </div>
                       <div>
                         <div class="text-gray-500">Region</div>
@@ -285,9 +285,9 @@
                         <label class="text-sm text-gray-700">Company</label>
                         <select id="companySelect-2" class="mt-1 w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm">
                           <option value="">Select company...</option>
-                          <option>Starbucks</option>
                           <option>Luckin Coffee</option>
                           <option>Boyu Capital</option>
+                          <option>Starbucks</option>
                           <option>Other / None</option>
                         </select>
                       </div>
@@ -296,16 +296,16 @@
                         <label class="text-sm text-gray-700">Decision</label>
                         <div class="mt-2 grid grid-cols-2 gap-2">
                           <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
-                            <input type="radio" name="decision-2" value="publish" class="h-4 w-4 text-brand-600" />
-                            <span>Publish</span>
-                          </label>
-                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
                             <input type="radio" name="decision-2" value="irrelevant" class="h-4 w-4 text-brand-600" />
                             <span>Irrelevant</span>
                           </label>
                           <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
                             <input type="radio" name="decision-2" value="duplicate" class="h-4 w-4 text-brand-600" />
                             <span>Duplicate</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-2" value="publish" class="h-4 w-4 text-brand-600" />
+                            <span>Publish</span>
                           </label>
                           <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
                             <input type="radio" name="decision-2" value="suppress" class="h-4 w-4 text-brand-600" />
@@ -316,7 +316,7 @@
 
                       <div>
                         <label for="notes-2" class="text-sm text-gray-700">Notes (optional)</label>
-                        <textarea id="notes-2" rows="3" class="mt-1 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Optional: tagging notes (e.g., M&A, China)"></textarea>
+                        <textarea id="notes-2" rows="3" class="mt-1 w-full rounded-md border border-surface-300 px-3 py-2 text-sm"></textarea>
                       </div>
 
                       <div class="flex gap-3">
@@ -331,6 +331,430 @@
                         <div class="mt-2 text-sm text-gray-700 space-y-2">
                           <p><span class="font-semibold">Company:</span> Starbucks. Counterparty: Boyu Capital (optional tag/link).</p>
                           <p><span class="font-semibold">Decision:</span> Publish. Material M&A/stake sale in China; consider tags like M&A, sell-down, China, and link related items.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            
+            <!-- Slide 3: Tenet Healthcare press release -->
+            <article id="slide3" class="min-w-full">
+              <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                <div class="lg:col-span-3">
+                  <div class="space-y-4">
+                    <div class="text-sm break-all">
+                      <a href="https://investor.tenethealth.com/press-releases/press-release-details/2025/Tenet-Announces-Upsizing-and-Pricing-of-Its-2-25-Billion-Private-Offerings-of-Senior-Secured-Notes-and-Senior-Notes/default.aspx" target="_blank" class="text-brand-700 hover:underline">https://investor.tenethealth.com/.../Tenet-Announces-Upsizing-and-Pricing...</a>
+                    </div>
+
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <p class="text-base font-semibold leading-snug">Tenet announces upsizing and pricing of $2.25bn private offerings of Senior Secured Notes and Senior Notes — Press release</p>
+                        <div class="mt-1 text-sm text-gray-700">Source: <a href="https://investor.tenethealth.com" target="_blank" class="text-brand-700 hover:underline">Tenet Healthcare IR</a></div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+                      <div>
+                        <div class="text-gray-500">Company</div>
+                        <div class="font-medium">Tenet Healthcare</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Type</div>
+                        <div class="font-medium">Press Release</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Date</div>
+                        <div class="font-medium">Mon, 03 Nov 25 (UTC 13:00)</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Region</div>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                          <span class="inline-flex items-center rounded bg-surface-200 px-2 py-0.5 text-xs">Americas</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <button type="button" class="j-btn publish inline-flex items-center rounded-md bg-emerald-600 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-emerald-700">Publish</button>
+                      <button type="button" class="j-btn publish-now inline-flex items-center rounded-md bg-emerald-500 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-emerald-600">Publish Now</button>
+                      <button type="button" class="j-btn suppress inline-flex items-center rounded-md border border-surface-300 bg-gray-200 px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm hover:bg-gray-300">Suppress Send</button>
+                      <button type="button" class="j-btn translate inline-flex items-center rounded-md border border-surface-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm hover:bg-surface-100">Translate</button>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="j-chip irrelevant inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Irrelevant</button>
+                      <button type="button" class="j-chip mismatch inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Company Mismatch</button>
+                      <button type="button" class="j-chip duplicate inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Duplicate</button>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Publish As...</option></select>
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Publish Now As...</option></select>
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Suppress As...</option></select>
+                    </div>
+
+                    <div class="pt-3">
+                      <h3 class="text-sm font-semibold">Recent Activity</h3>
+                      <ul class="mt-2 text-sm text-gray-700 space-y-1">
+                        <li>• 30 minutes ago: Tenet files for private offering; proposes Senior Secured and Senior Notes</li>
+                        <li>• 1 hour ago: Tenet Healthcare prices add-on secured notes due 2032 (market chatter)</li>
+                        <li>• 2 hours ago: Tenet 3Q update: leverage path and refinancing plans (company commentary)</li>
+                      </ul>
+                    </div>
+
+                    <div class="pt-3">
+                      <h3 class="text-sm font-semibold">Latest Published Activity</h3>
+                      <ul class="mt-2 text-sm text-gray-700 space-y-1">
+                        <li>• 3 days ago: Tenet completes divestiture of 2 hospitals (press release)</li>
+                        <li>• 1 week ago: Tenet announces tender offer results for outstanding notes</li>
+                        <li>• 2 weeks ago: Tenet to redeem portion of 2026 notes; updates liquidity</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Decision panel (right) -->
+                <div class="lg:col-span-2">
+                  <div class="rounded-lg border border-surface-200 bg-white p-4">
+                    <h2 class="font-semibold">Your decision</h2>
+                    <p class="text-sm text-gray-700 mt-1">Choose the company and whether this should be published on 9fin.</p>
+
+                    <div class="mt-4 space-y-4">
+                      <div>
+                        <label class="text-sm text-gray-700">Company</label>
+                        <select id="companySelect-3" class="mt-1 w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm">
+                          <option value="">Select company...</option>
+                          <option>HCA Healthcare</option>
+                          <option>Community Health Systems</option>
+                          <option>Tenet Healthcare</option>
+                          <option>Other / None</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label class="text-sm text-gray-700">Decision</label>
+                        <div class="mt-2 grid grid-cols-2 gap-2">
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-3" value="irrelevant" class="h-4 w-4 text-brand-600" />
+                            <span>Irrelevant</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-3" value="duplicate" class="h-4 w-4 text-brand-600" />
+                            <span>Duplicate</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-3" value="publish" class="h-4 w-4 text-brand-600" />
+                            <span>Publish</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-3" value="suppress" class="h-4 w-4 text-brand-600" />
+                            <span>Suppress send</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label for="notes-3" class="text-sm text-gray-700">Notes (optional)</label>
+                        <textarea id="notes-3" rows="3" class="mt-1 w-full rounded-md border border-surface-300 px-3 py-2 text-sm"></textarea>
+                      </div>
+
+                      <div class="flex gap-3">
+                        <button id="checkBtn-3" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white shadow hover:bg-brand-600">Check answer</button>
+                        <button id="resetBtn-3" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                      </div>
+
+                      <div id="result-3" class="hidden rounded-md border p-3 text-sm"></div>
+
+                      <details class="mt-2">
+                        <summary class="cursor-pointer text-sm text-brand-700 hover:underline">Show model answer</summary>
+                        <div class="mt-2 text-sm text-gray-700 space-y-2">
+                          <p><span class="font-semibold">Company:</span> Tenet Healthcare.</p>
+                          <p><span class="font-semibold">Decision:</span> Publish. This is a material capital markets event (upsized/priced secured and unsecured notes). Consider tags: bonds, senior secured notes, senior notes, pricing, upsizing, private offering, USD, capital markets.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            
+            <!-- Slide 4: Valeo vs Valeo Foods company mismatch -->
+            <article id="slide4" class="min-w-full">
+              <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                <div class="lg:col-span-3">
+                  <div class="space-y-4">
+                    <div class="text-sm break-all">
+                      <a href="https://www.reuters.com/business/autos-transportation/valeo-raise-prices-result-trumps-25-tariffs-car-imports-2025-03-27/" target="_blank" class="text-brand-700 hover:underline">https://www.reuters.com/business/autos-transportation/valeo-raise-prices-result-trumps-25-tariffs-car-imports-2025-03-27/</a>
+                    </div>
+
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <p class="text-base font-semibold leading-snug">Valeo to raise prices after US 25% auto import tariffs — Reuters</p>
+                        <div class="mt-1 text-sm text-gray-700">Source: <a href="https://www.reuters.com" target="_blank" class="text-brand-700 hover:underline">Reuters</a></div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+                      <div>
+                        <div class="text-gray-500">Company</div>
+                        <div class="font-medium">Valeo Foods</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Type</div>
+                        <div class="font-medium">News</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Date</div>
+                        <div class="font-medium">Thu, 27 Mar 25 (UTC 09:26)</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Region</div>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                          <span class="inline-flex items-center rounded bg-surface-200 px-2 py-0.5 text-xs">EMEA</span>
+                          <span class="inline-flex items-center rounded bg-surface-200 px-2 py-0.5 text-xs">Americas</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <button type="button" class="j-btn publish inline-flex items-center rounded-md bg-emerald-600 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-emerald-700">Publish</button>
+                      <button type="button" class="j-btn publish-now inline-flex items-center rounded-md bg-emerald-500 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-emerald-600">Publish Now</button>
+                      <button type="button" class="j-btn suppress inline-flex items-center rounded-md border border-surface-300 bg-gray-200 px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm hover:bg-gray-300">Suppress Send</button>
+                      <button type="button" class="j-btn translate inline-flex items-center rounded-md border border-surface-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm hover:bg-surface-100">Translate</button>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="j-chip irrelevant inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Irrelevant</button>
+                      <button type="button" class="j-chip mismatch inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Company Mismatch</button>
+                      <button type="button" class="j-chip duplicate inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Duplicate</button>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Publish As...</option></select>
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Publish Now As...</option></select>
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Suppress As...</option></select>
+                    </div>
+
+                    <div class="pt-3">
+                      <h3 class="text-sm font-semibold">Recent Activity</h3>
+                      <ul class="mt-2 text-sm text-gray-700 space-y-1">
+                        <li>• 20 minutes ago: Valeo Foods to increase confectionery prices amid cocoa inflation</li>
+                        <li>• 45 minutes ago: Valeo Foods completes acquisition of premium snack brand</li>
+                        <li>• 2 hours ago: Valeo Foods appoints new CFO to drive growth</li>
+                      </ul>
+                    </div>
+
+                    <div class="pt-3">
+                      <h3 class="text-sm font-semibold">Latest Published Activity</h3>
+                      <ul class="mt-2 text-sm text-gray-700 space-y-1">
+                        <li>• 3 days ago: Valeo Foods expands UK distribution for beverages portfolio</li>
+                        <li>• 1 week ago: Valeo Foods issues trading update on input costs</li>
+                        <li>• 2 weeks ago: Valeo Foods closes acquisition of bakery brand</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Decision panel (right) -->
+                <div class="lg:col-span-2">
+                  <div class="rounded-lg border border-surface-200 bg-white p-4">
+                    <h2 class="font-semibold">Your decision</h2>
+                    <p class="text-sm text-gray-700 mt-1">Choose the correct company and whether this should be published on 9fin.</p>
+
+                    <div class="mt-4 space-y-4">
+                      <div>
+                        <label class="text-sm text-gray-700">Company</label>
+                        <select id="companySelect-4" class="mt-1 w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm">
+                          <option value="">Select company...</option>
+                          <option>Valeo Foods</option>
+                          <option>Valeo SA</option>
+                          <option>Valeo</option>
+                          <option>Other / None</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label class="text-sm text-gray-700">Decision</label>
+                        <div class="mt-2 grid grid-cols-2 gap-2">
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-4" value="irrelevant" class="h-4 w-4 text-brand-600" />
+                            <span>Irrelevant</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-4" value="duplicate" class="h-4 w-4 text-brand-600" />
+                            <span>Duplicate</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-4" value="mismatch" class="h-4 w-4 text-brand-600" />
+                            <span>Company mismatch</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-4" value="publish" class="h-4 w-4 text-brand-600" />
+                            <span>Publish</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label for="notes-4" class="text-sm text-gray-700">Notes (optional)</label>
+                        <textarea id="notes-4" rows="3" class="mt-1 w-full rounded-md border border-surface-300 px-3 py-2 text-sm"></textarea>
+                      </div>
+
+                      <div class="flex gap-3">
+                        <button id="checkBtn-4" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white shadow hover:bg-brand-600">Check answer</button>
+                        <button id="resetBtn-4" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                      </div>
+
+                      <div id="result-4" class="hidden rounded-md border p-3 text-sm"></div>
+
+                      <details class="mt-2">
+                        <summary class="cursor-pointer text-sm text-brand-700 hover:underline">Show model answer</summary>
+                        <div class="mt-2 text-sm text-gray-700 space-y-2">
+                          <p><span class="font-semibold">Company:</span> Valeo (automotive supplier). Not Valeo Foods (branded food & beverage).</p>
+                          <p><span class="font-semibold">Decision:</span> Company mismatch. Select Company mismatch and remap the company to Valeo; then proceed to publish under the correct profile with tags like autos, supplier, pricing, tariffs.</p>
+                        </div>
+                      </details>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Slide 5: Global Foundries CEO; relevant but stale so Suppress send -->
+            <article id="slide5" class="min-w-full">
+              <div class="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                <div class="lg:col-span-3">
+                  <div class="space-y-4">
+                    <div class="text-sm break-all">
+                      <a href="https://www.reuters.com/technology/globalfoundries-appoints-tim-breen-ceo-2025-02-05/" target="_blank" class="text-brand-700 hover:underline">https://www.reuters.com/technology/globalfoundries-appoints-tim-breen-ceo-2025-02-05/</a>
+                    </div>
+
+                    <div class="flex items-start justify-between gap-4">
+                      <div>
+                        <p class="text-base font-semibold leading-snug">Global Foundries appoints Tim Breen as CEO — Reuters</p>
+                        <div class="mt-1 text-sm text-gray-700">Source: <a href="https://www.reuters.com" target="_blank" class="text-brand-700 hover:underline">Reuters</a></div>
+                      </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-sm">
+                      <div>
+                        <div class="text-gray-500">Company</div>
+                        <div class="font-medium">Global Foundries</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Type</div>
+                        <div class="font-medium">News</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Date</div>
+                        <div class="font-medium">Tue, 04 Nov 25 (UTC)</div>
+                      </div>
+                      <div>
+                        <div class="text-gray-500">Region</div>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                          <span class="inline-flex items-center rounded bg-surface-200 px-2 py-0.5 text-xs">Americas</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-1">
+                      <button type="button" class="j-btn publish inline-flex items-center rounded-md bg-emerald-600 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-emerald-700">Publish</button>
+                      <button type="button" class="j-btn publish-now inline-flex items-center rounded-md bg-emerald-500 px-3 py-1.5 text-sm font-medium text-white shadow hover:bg-emerald-600">Publish Now</button>
+                      <button type="button" class="j-btn suppress inline-flex items-center rounded-md border border-surface-300 bg-gray-200 px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm hover:bg-gray-300">Suppress Send</button>
+                      <button type="button" class="j-btn translate inline-flex items-center rounded-md border border-surface-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-900 shadow-sm hover:bg-surface-100">Translate</button>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2">
+                      <button type="button" class="j-chip irrelevant inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Irrelevant</button>
+                      <button type="button" class="j-chip mismatch inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Company Mismatch</button>
+                      <button type="button" class="j-chip duplicate inline-flex items-center rounded-full bg-rose-500 text-white px-3 py-1 text-xs font-semibold">Duplicate</button>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Publish As...</option></select>
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Publish Now As...</option></select>
+                      <select disabled class="w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm text-gray-700"><option>Suppress As...</option></select>
+                    </div>
+
+                    <div class="pt-3">
+                      <h3 class="text-sm font-semibold">Recent Activity</h3>
+                      <ul class="mt-2 text-sm text-gray-700 space-y-1">
+                        <li>• 25 minutes ago: Global Foundries shares tick higher on leadership change chatter</li>
+                        <li>• 1 hour ago: Foundry peers update: TSMC capex; Intel foundry roadmap</li>
+                        <li>• 3 hours ago: Global Foundries announces capacity expansion in NY</li>
+                      </ul>
+                    </div>
+
+                    <div class="pt-3">
+                      <h3 class="text-sm font-semibold">Latest Published Activity</h3>
+                      <ul class="mt-2 text-sm text-gray-700 space-y-1">
+                        <li>• 2 days ago: Global Foundries Q3: gross margin expands; outlook maintained</li>
+                        <li>• 1 week ago: Global Foundries signs long-term wafer supply agreement</li>
+                        <li>• 2 weeks ago: Global Foundries issues sustainability report</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Decision panel (right) -->
+                <div class="lg:col-span-2">
+                  <div class="rounded-lg border border-surface-200 bg-white p-4">
+                    <h2 class="font-semibold">Your decision</h2>
+                    <p class="text-sm text-gray-700 mt-1">It’s relevant, but check the article’s original publication date.</p>
+
+                    <div class="mt-4 space-y-4">
+                      <div>
+                        <label class="text-sm text-gray-700">Company</label>
+                        <select id="companySelect-5" class="mt-1 w-full rounded-md border border-surface-300 bg-white px-3 py-2 text-sm">
+                          <option value="">Select company...</option>
+                          <option>TSMC</option>
+                          <option>Global Foundries</option>
+                          <option>Intel</option>
+                          <option>Other / None</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label class="text-sm text-gray-700">Decision</label>
+                        <div class="mt-2 grid grid-cols-2 gap-2">
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-5" value="irrelevant" class="h-4 w-4 text-brand-600" />
+                            <span>Irrelevant</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-5" value="duplicate" class="h-4 w-4 text-brand-600" />
+                            <span>Duplicate</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-5" value="publish" class="h-4 w-4 text-brand-600" />
+                            <span>Publish</span>
+                          </label>
+                          <label class="flex items-center gap-2 rounded-md border border-surface-300 px-3 py-2 text-sm">
+                            <input type="radio" name="decision-5" value="suppress" class="h-4 w-4 text-brand-600" />
+                            <span>Suppress send</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label for="notes-5" class="text-sm text-gray-700">Notes (optional)</label>
+                        <textarea id="notes-5" rows="3" class="mt-1 w-full rounded-md border border-surface-300 px-3 py-2 text-sm"></textarea>
+                      </div>
+
+                      <div class="flex gap-3">
+                        <button id="checkBtn-5" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white shadow hover:bg-brand-600">Check answer</button>
+                        <button id="resetBtn-5" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                      </div>
+
+                      <div id="result-5" class="hidden rounded-md border p-3 text-sm"></div>
+
+                      <details class="mt-2">
+                        <summary class="cursor-pointer text-sm text-brand-700 hover:underline">Show model answer</summary>
+                        <div class="mt-2 text-sm text-gray-700 space-y-2">
+                          <p><span class="font-semibold">Company:</span> Global Foundries.</p>
+                          <p><span class="font-semibold">Decision:</span> Suppress send. This is relevant leadership news, but the original article is dated 27 Mar 2025. Use Suppress send to avoid pushing a stale item while keeping the record updated.</p>
                         </div>
                       </details>
                     </div>
@@ -380,8 +804,8 @@
   const track = document.getElementById('track')
   const actualSlides = document.querySelectorAll('#track > article').length
       const qIndexEl = document.getElementById('qIndex')
-      const qTotalEl = document.getElementById('qTotal')
-      const totalSlides = 10
+  const qTotalEl = document.getElementById('qTotal')
+  const totalSlides = 5
       qTotalEl.textContent = String(totalSlides)
       let currentIndex = 0
       const correctByIndex = Array.from({ length: totalSlides }, () => false)
@@ -404,8 +828,8 @@
       function updateNav() {
         // Prev enabled if not on first
         toggleEnable(prev, currentIndex > 0)
-        // Next enabled if current question answered correctly and not at last
-        const canNext = currentIndex < (actualSlides - 1) && !!correctByIndex[currentIndex]
+  // Temporarily: always allow Next unless on last slide (ignore correctness)
+  const canNext = currentIndex < (actualSlides - 1)
         toggleEnable(next, canNext)
         updateCounter()
       }
@@ -449,7 +873,7 @@
           const notesVal = notesEl && 'value' in notesEl ? String(notesEl.value) : ''
           let ok = true
           if (!answers.company) { ok = false; messages.push('Select a company.') }
-          if (!answers.decision) { ok = false; messages.push('Choose a decision (Publish, Irrelevant, Duplicate, Suppress).') }
+          if (!answers.decision) { ok = false; messages.push('Choose a decision option.') }
 
           if (answers.company && answers.company !== correct.company) {
             ok = false
@@ -473,10 +897,20 @@
             } else if (answers.decision === 'duplicate') {
               messages.push('Duplicate: only mark duplicate if an identical item was already processed; this appears new and material.')
             } else if (answers.decision === 'suppress') {
-              messages.push('Suppress: use suppress for delivery control, not to avoid publishing material news.')
+              messages.push('Suppress: use suppress for delivery control or to avoid pushing stale items; if the item is timely and material, choose Publish.')
+            } else if (answers.decision === 'mismatch') {
+              messages.push('Company mismatch: use this when the item is tagged to the wrong entity; if the company is correct, choose Publish instead.')
             }
           } else if (answers.decision === correct.decision) {
-            messages.push('Good call: Publish.')
+            if (correct.decision === 'publish') {
+              messages.push('Good call: Publish.')
+            } else if (correct.decision === 'mismatch') {
+              messages.push(`Good call: Company mismatch — remap to ${correct.company} and publish under the correct profile.`)
+            } else if (correct.decision === 'suppress') {
+              messages.push('Good call: Suppress send — relevant but avoid sending a stale alert.')
+            } else {
+              messages.push('Looks good.')
+            }
           }
 
           showResult(ok, messages)
@@ -512,6 +946,28 @@
     correct: { company: 'Starbucks', decision: 'publish' },
     index: 1,
     why: 'A 60% stake sale is a material M&A/sell-down event that changes ownership and control in a key market (China), with potential implications for strategy, funding and credit metrics.'
+  })
+  setupQuestion({
+    suffix: '-3',
+    groupName: 'decision-3',
+    correct: { company: 'Tenet Healthcare', decision: 'publish' },
+    index: 2,
+    why: 'An upsized and priced multi-tranche notes offering is a material capital markets event, affecting funding costs, maturity profile, and leverage. This warrants a published update with clear bond terms.'
+  })
+  setupQuestion({
+    suffix: '-4',
+    groupName: 'decision-4',
+    correct: { company: 'Valeo', decision: 'mismatch' },
+    index: 3,
+    wrongCompany: 'Valeo Foods',
+    why: 'This is about Valeo, the automotive supplier—not Valeo Foods. Marking Company mismatch and remapping avoids mis-tagging and ensures the update reaches the right audience and company profile.'
+  })
+  setupQuestion({
+    suffix: '-5',
+    groupName: 'decision-5',
+    correct: { company: 'Global Foundries', decision: 'suppress' },
+    index: 4,
+    why: 'It’s relevant leadership news, but the underlying article is dated 27 Mar 2025. Use Suppress send to avoid pushing a stale alert while keeping the item recorded.'
   })
 
       // Initial nav state
