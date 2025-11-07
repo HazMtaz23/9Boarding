@@ -159,11 +159,11 @@
         // Monitoring
         const mBtn = document.getElementById('monitorPracticeBtn')
         const mHint = document.getElementById('monitorPracticeHint')
-        if (mBtn && mHint) {
+    if (mBtn && mHint) {
           const mOk = !!saved['notion:newsapp-monitoring']
           if (mOk) {
             mBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed')
-            mHint.textContent = 'Monitoring reading complete — you can start the practice.'
+      mHint.textContent = 'NewsApp reading complete — you can start the practice.'
             mHint.classList.remove('text-gray-700')
             mHint.classList.add('text-green-700')
           } else {
