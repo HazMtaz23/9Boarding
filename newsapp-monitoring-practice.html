@@ -30,24 +30,24 @@
   <body class="bg-white text-gray-900">
     <header class="sticky top-0 z-40 bg-brand-800 shadow-sm">
       <div class="mx-auto max-w-7xl px-6 py-4 flex items-center gap-4 text-white">
-        <a href="/" class="flex items-center gap-3">
+  <a href="./index.html" class="flex items-center gap-3">
           <img src="./Images/9fin.jpg" alt="9fin logo" class="h-8 w-auto rounded object-contain" />
           <span class="text-lg font-semibold">9Boarding</span>
         </a>
         <nav class="ml-auto hidden sm:flex items-center gap-6 text-sm">
-          <a href="/index.html#workflows" class="text-white/90 hover:text-white">Workflows</a>
+          <a href="./index.html#workflows" class="text-white/90 hover:text-white">Workflows</a>
         </nav>
       </div>
     </header>
 
     <main class="mx-auto max-w-7xl px-6 py-10">
-      <a href="/news.html" class="text-sm text-brand-700 hover:underline">← Back to News reading</a>
+  <a href="./news.html" class="text-sm text-brand-700 hover:underline">← Back to News reading</a>
   <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mt-2">NewsApp — Practice</h1>
       <p class="mt-2 text-gray-600">Practice handling edge cases from the Changes queue, aliasing misses, and crawler duplicates. Unlocks after completing the Monitoring reading.</p>
 
       <div id="guard" class="mt-6 hidden rounded-lg border border-amber-200 bg-amber-50 text-amber-900 p-4">
         <p class="font-medium">Locked: complete the Monitoring reading first</p>
-  <p class="text-sm mt-1">Go back to the <a href="/news.html" class="underline">News reading list</a> and tick the “NewsApp” checkbox.</p>
+  <p class="text-sm mt-1">Go back to the <a href="./news.html" class="underline">News reading list</a> and tick the “NewsApp” checkbox.</p>
       </div>
 
       <section id="practiceContent" class="mt-8 hidden">
@@ -320,7 +320,179 @@
 
                 <div class="border-t border-surface-200 pt-5 flex items-center gap-3">
                   <button id="prevSectionBtn" class="inline-flex items-center justify-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">← Previous section</button>
-                  <a href="/news.html" class="ml-auto inline-flex items-center justify-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white shadow hover:bg-brand-600">Back to News</a>
+                  <button id="toSection3Btn" class="inline-flex items-center justify-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white shadow hover:bg-brand-600">Next section →</button>
+                  <a href="./news.html" class="ml-auto inline-flex items-center justify-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white shadow hover:bg-brand-600">Back to News</a>
+                </div>
+              </div>
+              
+              <!-- Section 3: Ratings Reports & Wire Service Items — Onboarding Quiz -->
+              <div class="min-w-full flex-none pl-0 md:pl-4">
+                <div>
+                  <h2 class="text-xl font-semibold">🧾 Ratings Reports & Wire Service Items — Onboarding Quiz</h2>
+                  <p class="mt-1 text-sm text-gray-700">Learn how to handle ratings reports and wire service items efficiently and safely.</p>
+
+                  <!-- 1 (Q19) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">1) Which ratings agency’s reports are most likely to appear in the NewsApp queue?</h3>
+                    <div class="mt-3 space-y-2">
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q19" value="a" class="h-4 w-4"/> a) Moody’s</label>
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q19" value="b" class="h-4 w-4"/> b) Fitch</label>
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q19" value="c" class="h-4 w-4"/> c) S&amp;P</label>
+                    </div>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q19-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q19-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q19-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 2 (Q20) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">2) Which types of ratings reports should generally be excluded from 9fin’s coverage?</h3>
+                    <p class="mt-1 text-sm text-gray-600">Hint: Focus on what’s in scope for leveraged finance.</p>
+                    <div class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+                      <label class="flex items-center gap-2"><input type="checkbox" name="q20" value="a" class="h-4 w-4"/> a) Corporate debt in the U.S.</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" name="q20" value="b" class="h-4 w-4"/> b) Sovereign debt</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" name="q20" value="c" class="h-4 w-4"/> c) Municipal bonds</label>
+                      <label class="flex items-center gap-2"><input type="checkbox" name="q20" value="d" class="h-4 w-4"/> d) Structured products</label>
+                    </div>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q20-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q20-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q20-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 3 (Q21) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">3) What should you do before adding a ratings report to 9fin?</h3>
+                    <div class="mt-3 space-y-2">
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q21" value="a" class="h-4 w-4"/> a) Publish it immediately</label>
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q21" value="b" class="h-4 w-4"/> b) Check if it’s already on the site</label>
+                    </div>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q21-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q21-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q21-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 4 (Q22) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">4) Why can ratings reports sometimes be tricky to match to company profiles?</h3>
+                    <p class="mt-1 text-sm text-gray-600">Hint: Issuers may use a legal or financing entity name.</p>
+                    <textarea id="q22-input" rows="3" class="mt-3 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Your answer..."></textarea>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q22-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q22-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q22-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 5 (Q23) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">5) What is a helpful clue within ratings reports for identifying the real company name?</h3>
+                    <div class="mt-3 space-y-2">
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q23" value="a" class="h-4 w-4"/> a) The URL of the report</label>
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q23" value="b" class="h-4 w-4"/> b) A parenthetical “does business as” or “operates under” note early in the report</label>
+                    </div>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q23-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q23-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q23-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 6 (Q24) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">6) When should you consider creating a new company profile before uploading a ratings report?</h3>
+                    <p class="mt-1 text-sm text-gray-600">Hint: Only after careful alias checks; think new issuers or major rating changes.</p>
+                    <textarea id="q24-input" rows="3" class="mt-3 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Your answer..."></textarea>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q24-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q24-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q24-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 7 (Q25) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">7) What must you never do when uploading a ratings report?</h3>
+                    <p class="mt-1 text-sm text-gray-600">Hint: Respect IP.</p>
+                    <textarea id="q25-input" rows="2" class="mt-3 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Your answer..."></textarea>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q25-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q25-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q25-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 8 (Q26) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">8) What’s the purpose of ensuring the text box is completely blank before publishing a ratings report?</h3>
+                    <p class="mt-1 text-sm text-gray-600">Hint: Think about where the client lands.</p>
+                    <textarea id="q26-input" rows="2" class="mt-3 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Your answer..."></textarea>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q26-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q26-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q26-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 9 (Q27) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">9) Why is updating the alias table after manually uploading a ratings report so important?</h3>
+                    <textarea id="q27-input" rows="3" class="mt-3 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Your answer..."></textarea>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q27-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q27-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q27-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 10 (Q28) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">10) How can you find which alias might have caused a report not to auto-publish?</h3>
+                    <div class="mt-3 space-y-2">
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q28" value="a" class="h-4 w-4"/> a) Search in #news-publisher on Slack</label>
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q28" value="b" class="h-4 w-4"/> b) Check Google</label>
+                    </div>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q28-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q28-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q28-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 11 (Q29) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">11) What type of wire service items can you learn to identify by title alone (and often skip opening)?</h3>
+                    <div class="mt-3 space-y-2">
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q29" value="a" class="h-4 w-4"/> a) Corporate announcements</label>
+                      <label class="flex items-center gap-2 text-sm"><input type="radio" name="q29" value="b" class="h-4 w-4"/> b) Municipal bond ratings</label>
+                    </div>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q29-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q29-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q29-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+
+                  <!-- 12 (Q30) -->
+                  <div class="mt-4 rounded-lg border border-surface-200 p-4">
+                    <h3 class="font-medium">12) Why is it important to amend company aliases when you find a wire service item that matches a 9fin company?</h3>
+                    <p class="mt-1 text-sm text-gray-600">Hint: Think about reducing repeated manual work.</p>
+                    <textarea id="q30-input" rows="3" class="mt-3 w-full rounded-md border border-surface-300 px-3 py-2 text-sm" placeholder="Your answer..."></textarea>
+                    <div class="mt-3 flex gap-3">
+                      <button id="q30-check" class="inline-flex items-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white hover:bg-brand-600">Check answer</button>
+                      <button id="q30-reset" class="inline-flex items-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">Reset</button>
+                    </div>
+                    <div id="q30-result" class="hidden mt-3 rounded-md border p-3 text-sm"></div>
+                  </div>
+                </div>
+                <div class="border-t border-surface-200 pt-5 flex items-center gap-3">
+                  <button id="prevSection3Btn" class="inline-flex items-center justify-center rounded-md bg-surface-200 px-4 py-2 text-sm font-medium text-gray-900 hover:bg-surface-300">← Previous section</button>
+                  <a href="./news.html" class="ml-auto inline-flex items-center justify-center rounded-md bg-brand-700 px-4 py-2 text-sm font-medium text-white shadow hover:bg-brand-600">Back to News</a>
                 </div>
               </div>
             </div>
@@ -382,6 +554,18 @@
   sectionIndex = 0
   track.style.transform = 'translateX(0)'
   setTimeout(updateViewportHeight, 160)
+        goTop()
+      })
+      document.getElementById('toSection3Btn')?.addEventListener('click',()=>{
+        sectionIndex = 2
+        track.style.transform = 'translateX(-200%)'
+        setTimeout(updateViewportHeight, 160)
+        goTop()
+      })
+      document.getElementById('prevSection3Btn')?.addEventListener('click',()=>{
+        sectionIndex = 1
+        track.style.transform = 'translateX(-100%)'
+        setTimeout(updateViewportHeight, 160)
         goTop()
       })
       // Initialize viewport height when content unlocks and on resize
@@ -596,6 +780,133 @@
   updateViewportHeight()
       })
       document.getElementById('q18-reset')?.addEventListener('click',()=>{const c=document.querySelector('input[name="q18"]:checked'); if(c) c.checked=false; document.getElementById('q18-result')?.classList.add('hidden')})
+
+      // --- Section 3 validation (Q19–Q30) ---
+      // Q19
+      document.getElementById('q19-check')?.addEventListener('click',()=>{
+        const v = document.querySelector('input[name="q19"]:checked')?.value
+        const ok = v === 'c'
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">S&P reports often need manual matching, so recognising them prioritises effort.</p></div>'
+        setOK(document.getElementById('q19-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">S&amp;P appears most due to entity name parsing limits.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">S&amp;P reports are more likely to need manual handling.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q19-reset')?.addEventListener('click',()=>{const c=document.querySelector('input[name="q19"]:checked'); if(c) c.checked=false; document.getElementById('q19-result')?.classList.add('hidden')})
+      // Q20
+      document.getElementById('q20-check')?.addEventListener('click',()=>{
+        const selected = Array.from(document.querySelectorAll('input[name="q20"]:checked')).map(el=>el.value)
+        const must = ['b','c']
+        const hasAll = must.every(m=>selected.includes(m))
+        const optionalD = selected.includes('d')
+        const ok = hasAll && (optionalD || !selected.includes('d')) && !selected.includes('a')
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Filtering out off-scope ratings keeps the feed focused on relevant leveraged finance issuers.</p></div>'
+        setOK(document.getElementById('q20-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Exclude sovereign, municipal, and often structured product reports.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Generally exclude sovereign and municipal; structured products may also be out of scope.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q20-reset')?.addEventListener('click',()=>{document.querySelectorAll('input[name="q20"]:checked').forEach(c=>c.checked=false); document.getElementById('q20-result')?.classList.add('hidden')})
+      // Q21
+      document.getElementById('q21-check')?.addEventListener('click',()=>{
+        const v = document.querySelector('input[name="q21"]:checked')?.value
+        const ok = v === 'b'
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Avoids duplicates and wasted time uploading already-covered content.</p></div>'
+        setOK(document.getElementById('q21-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Always check if it exists first.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">First confirm it isn\'t already uploaded.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q21-reset')?.addEventListener('click',()=>{const c=document.querySelector('input[name="q21"]:checked'); if(c) c.checked=false; document.getElementById('q21-result')?.classList.add('hidden')})
+      // Q22
+      document.getElementById('q22-check')?.addEventListener('click',()=>{
+        const ans = norm(document.getElementById('q22-input')?.value)
+        const ok = /legal|issuer|spv|different|financ|holding|entity/.test(ans) && /alias|name|match|hard|tricky/.test(ans)
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Understanding legal vs trading names prevents mis-tagging and missed auto-publishes.</p></div>'
+        setOK(document.getElementById('q22-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Legal/issuer entities differ from familiar company names.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Mention issuer/legal entities and alias/name mismatch difficulty.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q22-reset')?.addEventListener('click',()=>{const t=document.getElementById('q22-input'); if(t) t.value=''; document.getElementById('q22-result')?.classList.add('hidden')})
+      // Q23
+      document.getElementById('q23-check')?.addEventListener('click',()=>{
+        const v = document.querySelector('input[name="q23"]:checked')?.value
+        const ok = v === 'b'
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Parenthetical trading names help link the report to the correct profile.</p></div>'
+        setOK(document.getElementById('q23-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Use the early parenthetical name note.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Look for a parenthetical trading name near the top.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q23-reset')?.addEventListener('click',()=>{const c=document.querySelector('input[name="q23"]:checked'); if(c) c.checked=false; document.getElementById('q23-result')?.classList.add('hidden')})
+      // Q24
+      document.getElementById('q24-check')?.addEventListener('click',()=>{
+        const ans = norm(document.getElementById('q24-input')?.value)
+        const hasCheck = /triple|check|alias|search|existing|already/.test(ans)
+        const hasNew = /new|issuer|first|rating\s*change|significant|material/.test(ans)
+        const ok = hasCheck && hasNew
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Creating profiles only when necessary keeps data clean and prevents duplicates.</p></div>'
+        setOK(document.getElementById('q24-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Only after thorough alias checks for new issuers or major changes.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Mention deep alias checking and new issuer / major rating change context.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q24-reset')?.addEventListener('click',()=>{const t=document.getElementById('q24-input'); if(t) t.value=''; document.getElementById('q24-result')?.classList.add('hidden')})
+      // Q25
+      document.getElementById('q25-check')?.addEventListener('click',()=>{
+        const ans = norm(document.getElementById('q25-input')?.value)
+        const ok = /never|don'?t|do\s*not/.test(ans) && /copy|paste|text|copyright|copyrighted/.test(ans)
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Respecting copyright avoids legal risk and keeps process compliant.</p></div>'
+        setOK(document.getElementById('q25-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Do not copy/paste copyrighted report text.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">State that copying/pasting the report text is prohibited.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q25-reset')?.addEventListener('click',()=>{const t=document.getElementById('q25-input'); if(t) t.value=''; document.getElementById('q25-result')?.classList.add('hidden')})
+      // Q26
+      document.getElementById('q26-check')?.addEventListener('click',()=>{
+        const ans = norm(document.getElementById('q26-input')?.value)
+        const ok = /direct|link|client|landing|avoid|blank|placeholder|ensure/.test(ans)
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">A blank body ensures clients reach the official source, not empty 9fin content.</p></div>'
+        setOK(document.getElementById('q26-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Blank body forces direct navigation to the source report.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Explain that blank text ensures the link takes clients straight to the report.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q26-reset')?.addEventListener('click',()=>{const t=document.getElementById('q26-input'); if(t) t.value=''; document.getElementById('q26-result')?.classList.add('hidden')})
+      // Q27
+      document.getElementById('q27-check')?.addEventListener('click',()=>{
+        const ans = norm(document.getElementById('q27-input')?.value)
+        const ok = /future|auto|publish|automatic|reduce|manual|work|accuracy|alias/.test(ans) && /alias|table|mapping|match/.test(ans)
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Updating aliases automates future similar reports and improves reliability.</p></div>'
+        setOK(document.getElementById('q27-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Alias updates enable future auto-publish and accuracy.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Mention alias updates reduce manual work and future misses.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q27-reset')?.addEventListener('click',()=>{const t=document.getElementById('q27-input'); if(t) t.value=''; document.getElementById('q27-result')?.classList.add('hidden')})
+      // Q28
+      document.getElementById('q28-check')?.addEventListener('click',()=>{
+        const v = document.querySelector('input[name="q28"]:checked')?.value
+        const ok = v === 'a'
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Slack channel context helps diagnose alias mismatches fast.</p></div>'
+        setOK(document.getElementById('q28-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Use #news-publisher for alias clues.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Check #news-publisher rather than generic web search.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q28-reset')?.addEventListener('click',()=>{const c=document.querySelector('input[name="q28"]:checked'); if(c) c.checked=false; document.getElementById('q28-result')?.classList.add('hidden')})
+      // Q29
+      document.getElementById('q29-check')?.addEventListener('click',()=>{
+        const v = document.querySelector('input[name="q29"]:checked')?.value
+        const ok = v === 'b'
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Recognising municipal bond rating items by title saves review time.</p></div>'
+        setOK(document.getElementById('q29-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Municipal bond ratings are often skippable.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Municipal bond rating items can be identified and deprioritised.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q29-reset')?.addEventListener('click',()=>{const c=document.querySelector('input[name="q29"]:checked'); if(c) c.checked=false; document.getElementById('q29-result')?.classList.add('hidden')})
+      // Q30
+      document.getElementById('q30-check')?.addEventListener('click',()=>{
+        const ans = norm(document.getElementById('q30-input')?.value)
+        const ok = /auto|publish|next|future|reduce|manual|avoid|repeat|work/.test(ans) && /alias|update|amend|table|mapping/.test(ans)
+        const why = '<div class="mt-3 pt-2 border-t"><p class="font-medium">Why this matters</p><p class="mt-1">Alias improvements enable future wire items to publish automatically and raise data quality.</p></div>'
+        setOK(document.getElementById('q30-result'), ok,
+          (ok?'<p class="font-semibold">Correct</p><p class="mt-1">Amending aliases ensures future auto-publish and less manual review.</p>':'<p class="font-semibold">Not quite</p><p class="mt-1">Mention alias amendment reduces future manual handling and improves auto-publish.</p>')+why)
+        updateViewportHeight()
+      })
+      document.getElementById('q30-reset')?.addEventListener('click',()=>{const t=document.getElementById('q30-input'); if(t) t.value=''; document.getElementById('q30-result')?.classList.add('hidden')})
     </script>
   </body>
 </html>
