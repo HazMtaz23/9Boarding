@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Welcome • 9Boarding</title>
+<link rel="prefetch" href="./index.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>tailwind.config={theme:{extend:{colors:{brand:{50:'#e9eef9',100:'#cdd8f0',200:'#a9b9e2',300:'#7e95cf',400:'#566fb7',500:'#3a5498',600:'#2b417a',700:'#223665',800:'#1a2a4f',900:'#121d38'},surface:{100:'#f8fafc',200:'#eef2f7',300:'#e2e8f0'}},animation:{'gradient-move':'gradient 8s ease infinite','float':'float 6s ease-in-out infinite'},keyframes:{gradient:{'0%,100%':{backgroundPosition:'0% 50%'},'50%':{backgroundPosition:'100% 50%'}},float:{'0%,100%':{transform:'translateY(0px)'},'50%':{transform:'translateY(-18px)'}}}}}};</script>
+<style>html{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,'Apple Color Emoji','Segoe UI Emoji';}
+body{min-height:100vh;display:flex;}
+.bg-animated{background:linear-gradient(140deg,#121d38,#1a2a4f,#223665);background-size:100% 100%;}
+.blob{position:absolute;inset:0;overflow:hidden;pointer-events:none;}
+.blob div{position:absolute;border-radius:50%;filter:blur(40px);opacity:.35;animation:float 10s ease-in-out infinite;}
+.blob div:nth-child(1){width:420px;height:420px;background:#566fb7;top:10%;left:5%;animation-duration:12s;}
+.blob div:nth-child(2){width:340px;height:340px;background:#3a5498;bottom:15%;right:10%;animation-duration:11s;}
+.blob div:nth-child(3){width:300px;height:300px;background:#223665;top:55%;left:50%;animation-duration:9s;}
+.type span{border-right:3px solid #fff;animation:caret .9s steps(1) infinite;}
+@keyframes caret{50%{border-color:transparent}}
+/* Transition enhancements */
+body.login-exit .login-card{transform:translateY(-12px) scale(.96);opacity:0;filter:blur(6px);} 
+body.login-exit .blob div{opacity:0.15;filter:blur(60px);} 
+.login-card{transition:opacity .5s ease,transform .5s ease,filter .5s ease;} 
+.login-spinner{width:16px;height:16px;border-radius:50%;border:3px solid rgba(255,255,255,.4);border-top-color:#fff;animation:spin .8s linear infinite;} 
+@keyframes spin{to{transform:rotate(360deg)}}
+body:not(.login-exit) .post-login-overlay{display:none;} 
+.post-login-overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(18,29,56,.55);backdrop-filter:blur(4px);z-index:50;opacity:0;transition:opacity .35s ease;} 
+body.login-exit .post-login-overlay{opacity:1;}
+</style>
+</head>
+<body class="bg-brand-900 text-white bg-animated">
+  <div class="blob">
+    <div></div><div></div><div></div>
+  </div>
+  <main class="relative z-10 flex flex-col w-full items-center justify-center px-6 py-12">
+    <div class="max-w-xl w-full mx-auto">
+      <div class="mb-8 text-center">
+        <a href="#" class="inline-flex items-center gap-3">
+          <img src="./Images/9fin.jpg" alt="9fin" class="h-12 w-auto rounded shadow"/>
+          <span class="text-3xl font-extrabold tracking-tight">9Boarding</span>
+        </a>
+        <p class="mt-4 text-sm text-brand-50/80">Data Operations • News Team</p>
+      </div>
+  <div class="rounded-2xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 shadow-xl overflow-hidden login-card">
+        <div class="p-8">
+          <h1 class="text-2xl sm:text-3xl font-bold leading-tight">Start Your Journey</h1>
+          <p class="mt-2 text-sm text-brand-50/80">Access the internal training workspace. Enter the password provided by your manager.</p>
+          <div class="mt-6 space-y-4">
+            <div>
+              <label class="text-xs uppercase tracking-wide font-semibold text-brand-100">Password</label>
+              <input id="pw" type="password" class="mt-2 w-full rounded-md bg-white/10 focus:bg-white/20 border border-white/20 focus:border-white/40 px-3 py-2 text-sm placeholder-brand-50/40 outline-none" placeholder="Enter password" autocomplete="current-password"/>
+            </div>
+            <button id="loginBtn" class="w-full inline-flex items-center justify-center gap-2 rounded-md bg-brand-500 hover:bg-brand-400 active:bg-brand-600 transition-colors px-4 py-2.5 text-sm font-semibold text-white shadow relative">
+              <span class="btn-label">Enter Workspace</span>
+            </button>
+            <div id="msg" class="hidden text-sm mt-2 rounded-md border px-3 py-2"></div>
+          </div>
+          <div class="mt-8 text-xs text-brand-50/60 leading-relaxed type" id="typewriter"></div>
+        </div>
+        <div class="px-8 py-4 bg-brand-800/40 text-xs text-brand-50/70 flex items-center justify-between">
+          <p class="font-medium">Focus • Consistency • Market Insight</p>
+          <p class="opacity-70">© <span id="year"></span> 9Boarding</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="post-login-overlay">
+    <div class="flex flex-col items-center gap-4 text-white">
+      <div class="login-spinner"></div>
+      <div class="text-sm font-medium tracking-wide">Preparing workspace…</div>
+    </div>
+  </div>
+  <script>
+    // Simple constants
+    const PASSWORD = '9boarding2025';
+  const KEY='9boarding:auth'; // session-based so closing browser resets
+
+    // Already authenticated? redirect
+  if(sessionStorage.getItem(KEY)==='yes'){
+      window.location.replace('./index.html');
+    }
+
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    const btn=document.getElementById('loginBtn');
+    const pw=document.getElementById('pw');
+    const msg=document.getElementById('msg');
+
+    function setMsg(ok,text){
+      msg.classList.remove('hidden','border-red-300','bg-red-50/10','text-red-200','border-green-300','bg-green-50/10','text-green-200');
+      if(ok){msg.classList.add('border-green-300','bg-green-50/10','text-green-200')} else {msg.classList.add('border-red-300','bg-red-50/10','text-red-200')}
+      msg.innerHTML=text;
+    }
+
+  btn.addEventListener('click',()=>{
+      const v=pw.value.trim();
+      if(!v){setMsg(false,'Password required'); return;}
+      if(v===PASSWORD){
+        sessionStorage.setItem(KEY,'yes');
+    // Transition sequence
+    setMsg(true,'Access granted');
+    btn.disabled=true; pw.disabled=true;
+    document.querySelector('.btn-label').innerHTML='Entering…';
+    const spinner=document.createElement('div'); spinner.className='login-spinner';
+    btn.appendChild(spinner);
+    document.body.classList.add('login-exit');
+    // Short delay then redirect
+  // Extend delay so loading state is more noticeable
+  setTimeout(()=>window.location.replace('./index.html'),2100);
+      } else {
+        setMsg(false,'Incorrect password');
+      }
+    });
+    pw.addEventListener('keyup',e=>{ if(e.key==='Enter'){ btn.click(); }});
+
+    // Typewriter copy
+    const lines=[
+      'Welcome Associate — this space accelerates your market and platform fluency.',
+      'You\'ll work through News triage, Deals intake, CLO capture, ratings & monitoring flows.',
+      'Learn patterns. Practice structure. Tag, publish, and update with confidence.'
+    ];
+    let lineIndex=0, charIndex=0;
+    const tw=document.getElementById('typewriter');
+    // Container will accumulate finished lines; current line shows caret
+    function render(){
+      const finished=lines.slice(0,lineIndex).map(l=>`<div>${l}</div>`).join('');
+      const current=lineIndex < lines.length ? `<div><span>${lines[lineIndex].slice(0,charIndex)}</span></div>` : '';
+      tw.innerHTML=finished+current;
+    }
+    function typeTick(){
+      if(lineIndex>=lines.length) return; // done
+      render();
+      if(charIndex < lines[lineIndex].length){
+        charIndex++;
+        setTimeout(typeTick,32);
+      } else {
+        // move to next line after pause
+        lineIndex++; charIndex=0;
+        setTimeout(typeTick,650);
+      }
+    }
+    setTimeout(typeTick,400);
+  </script>
+</body>
+</html>
